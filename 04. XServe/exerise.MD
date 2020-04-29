@@ -1,0 +1,2 @@
+- Create a calculator class for basic arithmetics
+- Create a node server with one or more route that responds to the server

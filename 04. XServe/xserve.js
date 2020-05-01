@@ -1,4 +1,5 @@
 const http = require("http");
+const XServeResponse = require("./lib/xserve-response");
 
 class XServe {
   constructor() {
@@ -24,7 +25,7 @@ class XServe {
       const route = this.findRoute(req);
 
       if (route) {
-        route.hander(req, res);
+        route.hander(req, new XServeResponse(res));
       }
     });
   }
